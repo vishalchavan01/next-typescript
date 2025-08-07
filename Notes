@@ -1,1 +1,38 @@
-Something
+1. Special Files in Next.js
+Common special files: page.tsx, layout.tsx, template.tsx, not-found.tsx, loading.tsx
+Purpose of loading.tsx: Shows a loading state instantly when navigating to a route segment.
+Example: loading.tsx
+
+How it works: Automatically wraps the corresponding page.tsx and children in a React Suspense boundary.
+Testing loading state: Add a delay in your page to see the loading UI.
+Example: Simulate delay in page.tsx
+
+Enhancing loading UI: Use skeleton loaders, spinners, previews, etc.
+2. Error Handling with error.tsx
+Purpose: Handles errors for its folder and all nested child segments.
+Error boundaries bubble up: Errors are caught by the nearest parent error.tsx.
+Example: Basic error boundary
+
+Retrying errors: Use the reset function prop to allow users to retry.
+Example: Retry with router refresh
+
+3. Error Handling in Nested Routes
+Placement matters: Moving error.tsx up or down the route hierarchy changes which UI parts are replaced on error.
+More precise error handling: Place error.tsx in nested folders for granular control.
+4. Error Handling in Layouts
+Limitation: Errors thrown in layout.tsx are not caught by error.tsx in the same segment.
+Solution: Move error.tsx to the parent segment of the layout.
+5. Global Error Handling with global-error.tsx
+Purpose: Handles catastrophic errors at the root level.
+Location: Place global-error.tsx in the root app directory.
+Must include <html> and <body> tags because it replaces the entire root layout.
+Example: global-error.tsx
+
+Works only in production mode.
+Keep it simple: Use only HTML and CSS to avoid further errors.
+Summary:
+
+Use loading.tsx for instant feedback during route transitions.
+Place error.tsx strategically for granular error handling.
+Use global-error.tsx for root-level catastrophic errors, including <html> and <body>.
+Enhance user experience with retry buttons and polished loading/error UIs.
