@@ -7,7 +7,7 @@ export const generateMetadata = async ({params}: propsType) : Promise<Metadata> 
     const name = await new Promise((resolve)=>{
         setTimeout(() => {
             resolve('iPhone');
-        }, 1000);
+        }, 10);
     });
     return{
         title: `${name} ${(await params).productId}`,
@@ -18,8 +18,11 @@ const ProductDetails = async ({ params }: propsType) => {
     // const productId = (await params).productId;
     const {productId} = (await params);
 
+    if (parseInt(productId) > 50) {
+        await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate delay
+    }
     if(parseInt(productId)>100){
-        notFound();
+        throw new Error("Product not found");
     }
     return (
         <div>ProductDetails {(await productId)}</div>

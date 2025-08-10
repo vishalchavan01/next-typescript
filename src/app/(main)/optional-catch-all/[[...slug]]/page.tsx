@@ -2,7 +2,8 @@ import React from 'react'
 
 const OptionalCatchAll = () => {
   return (
-    <div>OptionalCatchAll</div>
+    <h2>OptionalCatchAll</h2>
+
   )
 }
 

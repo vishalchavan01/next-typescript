@@ -1,18 +1,32 @@
-import Link from "next/link"
+// import { Metadata } from "next/types";
+// import { propsType } from "./products/[productId]/page";
+
+// export const generateMetadata = async ({ params }: propsType): Promise<Metadata> => {
+//   console.log("params:", (await params))
+//   return {
+//     title: {
+//       default: "Practice App",
+//       template: "%s",
+//     },
+//     description: "Practice related pages",
+//   };
+// }
+
 
 const Home = () => {
-  const navLink = [
-    { name: "Home", href: "/" },
-    { name: "Login", href: "/login" },
-    { name: "Register", href: "/register" },
-  ]
+  // const navLink = [
+  //   { name: "Home", href: "/" },
+  //   { name: "Login", href: "/login" },
+  //   { name: "Register", href: "/register" },
+  // ]
   return (
     <div>
-      <ul>
+      Home Page
+      {/* <ul>
         {navLink.map(({ name, href }) => {
           return (<li key={name}><Link href={href}>{name}</Link></li>)
         })}
-      </ul>
+      </ul> */}
     </div>
   )
 }
