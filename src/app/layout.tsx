@@ -27,13 +27,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <h2 style={{ color: "red" }}>Main Layout</h2>
-        <div>
-          <ul>
-            {navLink.map(({ name, href }) => {
-              return (<li key={name}><Link href={href}>{name}</Link></li>)
-            })}
-          </ul>
+        <div style={{ background: "rgba(245, 255, 131, 1)" }}>
+          <h2 style={{ color: "red" }}>Main Layout</h2>
+          <div>
+            <ul>
+              {navLink.map(({ name, href }) => {
+                return (<li key={name}><Link href={href}>{name}</Link></li>)
+              })}
+            </ul>
+          </div>
         </div>
         {children}
         <br />
