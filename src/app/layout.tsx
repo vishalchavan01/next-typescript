@@ -21,6 +21,7 @@ export default function RootLayout({
     { name: "OptionalCatchAll", href: "/optional-catch-all/any" },
     { name: "Blogs", href: "/blogs" },
     { name: "Products", href: "/products" },
+    { name: "Dashboard", href: "/dashboard" },
   ]
 
   return (
