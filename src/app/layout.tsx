@@ -19,9 +19,10 @@ export default function RootLayout({
     { name: "Login", href: "/login" },
     { name: "Register", href: "/register" },
     { name: "OptionalCatchAll", href: "/optional-catch-all/any" },
-    { name: "Blogs", href: "/blogs" },
+    { name: "Blogs", href: "/blogs/something" },
     { name: "Products", href: "/products" },
     { name: "Dashboard", href: "/dashboard" },
+    { name: "f3", href: "/f3" },
   ]
 
   return (
