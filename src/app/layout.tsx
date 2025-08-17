@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Practice App",
@@ -28,17 +29,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-
-        <div>
-          <div className="header text-red-50"> header </div>
+{/* 
+        <div className="flex justify-around">
+          <div className="header"> header </div>
           <div className="main"> main </div>
           <div className="footer"> footer </div>
 
-        </div>
+        </div> */}
 
 
 
-        <div style={{ background: "rgba(245, 255, 131, 1)" }}>
+        <div style={{ background: "rgba(245, 255, 131, 1)", margin: "10px" }}>
           <h2 style={{ color: "red" }}>Main Layout</h2>
           <div>
             <ul>

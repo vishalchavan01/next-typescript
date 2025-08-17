@@ -22,9 +22,6 @@ const Home = () => {
   return (
     <div>
       Home Page
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
       {/* <ul>
         {navLink.map(({ name, href }) => {
           return (<li key={name}><Link href={href}>{name}</Link></li>)
