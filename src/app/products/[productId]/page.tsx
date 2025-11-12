@@ -14,6 +14,7 @@ export const generateMetadata = async ({params}: propsType) : Promise<Metadata> 
 }
 
 const ProductDetails = async ({ params }: propsType) => {
+
     // const productId = (await params).productId;
     const {productId} = (await params);
 
@@ -23,8 +24,12 @@ const ProductDetails = async ({ params }: propsType) => {
     if(parseInt(productId)>100){
         throw new Error("Product not found");
     }
+
     return (
-        <div>ProductDetails {(await productId)}</div>
+        <>
+            <div>Product Details Page</div>
+            <div>ProductDetails {(await productId)}</div>
+        </>
     )
 }
 export default ProductDetails

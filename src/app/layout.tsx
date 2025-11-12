@@ -24,6 +24,7 @@ export default function RootLayout({
     { name: "Products", href: "/products" },
     { name: "Dashboard", href: "/dashboard" },
     { name: "f3", href: "/f3" },
+    { name: "Add Product", href: "/add-product" },
   ]
 
   return (
